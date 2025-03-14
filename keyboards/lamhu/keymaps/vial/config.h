@@ -6,5 +6,5 @@
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
 /* VIAL secure unlock keystroke - currently both inner thumb keys (typ. SPACE/ENTER) */
-#define VIAL_UNLOCK_COMBO_ROWS { 1, 1 }
-#define VIAL_UNLOCK_COMBO_COLS { 2, 2 }
+#define VIAL_UNLOCK_COMBO_ROWS { 1, 2 }
+#define VIAL_UNLOCK_COMBO_COLS { 8, 7 }

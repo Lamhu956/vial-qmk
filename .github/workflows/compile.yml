@@ -12,20 +12,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
     - name: Install dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y git build-essential gcc-avr binutils-avr avr-libc
         pip install qmk
+
     - name: Compile firmware
       run: |
         qmk compile -kb lamhu -km vial
+
     - name: Upload firmware
       uses: actions/upload-artifact@v2
       with:
         name: firmware
-        path: _build/
+        path: .build/    # 正确路径
